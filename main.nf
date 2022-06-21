@@ -29,6 +29,7 @@
 
  process check_disk_size {
 
+	 publishDir "${params.outdir}/results", mode: 'copy'
 
 	input:
 	tuple val(sampleID), file(vcf), file(index) from vcf_ch
