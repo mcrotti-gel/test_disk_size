@@ -39,6 +39,7 @@
 	"""
 	bcftools query -l ${vcf} > ${vcf}_header.txt
 	rm ${vcf}_header.txt
+	hostname
 	df -h
 	"""
 
