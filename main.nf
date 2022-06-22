@@ -29,7 +29,7 @@
 
  process check_disk_size {
 
-	 publishDir "${params.outdir}", mode: 'copy'
+	echo true
 
 	input:
 	tuple val(sampleID), file(vcf), file(index) from vcf_ch
@@ -37,10 +37,9 @@
 	script:
 
 	"""
-	df -h > ${vcf}_df.txt
 	bcftools query -l ${vcf} > ${vcf}_header.txt
 	rm ${vcf}_header.txt
-	rm ${vcf}
+	df -h
 	"""
 
  }
