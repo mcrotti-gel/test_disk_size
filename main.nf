@@ -5,7 +5,7 @@
   Set up variables
  ----------------------------*/
 
- // input vcfs
+ // input vcfss
 
  vcf_ch = Channel
 			.fromPath(params.vcf_list)
